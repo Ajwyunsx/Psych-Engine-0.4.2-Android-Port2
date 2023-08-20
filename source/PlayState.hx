@@ -393,6 +393,21 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+			case 'nbs': //bad time
+				BG1 = new BGSprite('sans/NS/Stage-S-999', -600, 50, 9, 9, ['Idle']);
+				BG1.animation.addByPrefix('idle', 'Stage-S-999 S-999 instance ', 24, true);
+				BG1.updateHitbox();
+				add(BG1);
+				BG = new BGSprite('sans/NS/StageNor', -600, 50, 9, 9, ['Idle']);
+				BG.animation.addByPrefix('idle', 'Tween 1 instance ', 24, true);
+				BG.updateHitbox();
+				BG.alpha = 0;
+				add(BG);
+				BG2 = new BGSprite('sans/NS/DaDrop', -600, 50, 9, 9, ['Idle']);
+				BG2.animation.addByPrefix('idle', 'Boi instance ', 24, true);
+				BG2.updateHitbox();
+				BG2.alpha = 0;
+				add(BG2);
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
