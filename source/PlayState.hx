@@ -2654,6 +2654,20 @@ class PlayState extends MusicBeatState
 
 			case 'Play Animation':
 				//trace('Anim to play: ' + value1);
+				switch(value1.toLowerCase()) {
+				case '0':
+				BG.alpha = 0;
+				BG2.alpha = 0;
+				BG1.alpha = 1;
+				case '1':
+			    BG.alpha = 1;
+				BG2.alpha = 0;
+				BG1.alpha = 0;
+				case '2':
+				BG.alpha = 0;
+				BG2.alpha = 1;
+				BG1.alpha = 0;
+				}
 				var char:Character = dad;
 				switch(value2.toLowerCase().trim()) {
 					case 'bf' | 'boyfriend':
