@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="StageNor.png">
+<SubTexture name="Tween 1 instance 0000" x="0" y="0" width="192" height="108" frameX="0" frameY="0" frameWidth="192" frameHeight="108" />
+</TextureAtlas>
