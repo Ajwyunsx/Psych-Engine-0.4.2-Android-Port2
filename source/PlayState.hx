@@ -208,9 +208,6 @@ class PlayState extends MusicBeatState
 	var grpLimoParticles:FlxTypedGroup<BGSprite>;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:BGSprite;
-	var BG:BGSprite;
-	var BG1:BGSprite;
-	var BG2:BGSprite;
 
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
@@ -396,21 +393,6 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
-			case 'nbs': //bad time
-			var	BG1 = new BGSprite('sans/NS/Stage-S-999', -600, 50, 9, 9, ['Idle']);
-				BG1.animation.addByPrefix('idle', 'Stage-S-999 S-999 instance ', 24, true);
-				BG1.updateHitbox();
-				add(BG1);
-			var	BG = new BGSprite('sans/NS/StageNor', -600, 50, 9, 9, ['Idle']);
-				BG.animation.addByPrefix('idle', 'Tween 1 instance ', 24, true);
-				BG.updateHitbox();
-				BG.alpha = 0;
-				add(BG);
-			var	BG2 = new BGSprite('sans/NS/DaDrop', -600, 50, 9, 9, ['Idle']);
-				BG2.animation.addByPrefix('idle', 'Boi instance ', 24, true);
-				BG2.updateHitbox();
-				BG2.alpha = 0;
-				add(BG2);
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
@@ -2657,20 +2639,6 @@ class PlayState extends MusicBeatState
 
 			case 'Play Animation':
 				//trace('Anim to play: ' + value1);
-				switch(value1.toLowerCase()) {
-				case '0':
-				BG.alpha = 0;
-				BG2.alpha = 0;
-				BG1.alpha = 1;
-				case '1':
-			    BG.alpha = 1;
-				BG2.alpha = 0;
-				BG1.alpha = 0;
-				case '2':
-				BG.alpha = 0;
-				BG2.alpha = 1;
-				BG1.alpha = 0;
-				}
 				var char:Character = dad;
 				switch(value2.toLowerCase().trim()) {
 					case 'bf' | 'boyfriend':
